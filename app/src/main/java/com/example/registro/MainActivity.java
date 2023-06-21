@@ -40,7 +40,7 @@ public class MainActivity extends AppCompatActivity {
 
                 String text = "Usuario: " + name + " " + lastName + " Email: " + email + " Contraseña: " + password;
 
-                if(name.isEmpty() || lastName.isEmpty() || email.isEmpty() || password.isEmpty() || !email.contains("@")){
+                if (name.isEmpty() || lastName.isEmpty() || email.isEmpty() || password.isEmpty() || !email.contains("@")) {
                     Toast.makeText(getBaseContext(), "Faltan datos por ingresar", Toast.LENGTH_SHORT).show();
                 }
 
