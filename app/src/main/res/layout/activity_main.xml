@@ -8,16 +8,16 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="109dp"
+        android:layout_height="103dp"
         android:layout_marginTop="28dp"
-        android:background="#000000"
+        android:background="#00FFFFFF"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher_foreground"
-        tools:srcCompat="@drawable/ic_launcher_foreground" />
+        app:srcCompat="@drawable/noun_account"
+        tools:srcCompat="@drawable/noun_account" />
 
     <EditText
         android:id="@+id/textName"
