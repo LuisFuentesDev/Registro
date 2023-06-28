@@ -9,34 +9,28 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.registro.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
+
+    private ActivityMainBinding binding;
 
     @SuppressLint("MissingInflatedId")
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        binding = ActivityMainBinding.inflate(getLayoutInflater());
 
-        EditText textName;
-        EditText textLastName;
-        EditText textEmail;
-        EditText textPassword;
+        setContentView(binding.getRoot());
 
-        textName = findViewById(R.id.textName);
-        textLastName = findViewById(R.id.textLastName);
-        textEmail = findViewById(R.id.textEmail);
-        textPassword = findViewById(R.id.textPassword);
-
-        Button buttonCreate = findViewById(R.id.buttonCreateAccount);
-
-        buttonCreate.setOnClickListener(new View.OnClickListener() {
+        binding.buttonCreateAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                String name = textName.getText().toString();
-                String lastName = textLastName.getText().toString();
-                String email = textEmail.getText().toString();
-                String password = textPassword.getText().toString();
+                String name = binding.textName.getText().toString();
+                String lastName = binding.textLastName.getText().toString();
+                String email = binding.textEmail.getText().toString();
+                String password = binding.textPassword.getText().toString();
 
                 String text = "Usuario: " + name + " " + lastName + " Email: " + email + " Contraseña: " + password;
 
